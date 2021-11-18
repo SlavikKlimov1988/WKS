@@ -12,3 +12,19 @@
 //         const rect = el.getBounding
 //     }
 // }
+let popup = document.getElementById('mypopup')
+let popupTogle = document.getElementById('myBtn')
+let popupClose = document.getElementById('close')
+
+popupTogle.onclick = function(){
+    popup.style.display = "block";
+};
+
+popupClose.onclick =function (){
+    popup.style.display = "none"
+};
+window.onclick = function(e){
+    if(e.target == popup){
+        popup.style.display = "none"
+    }
+}

@@ -36,6 +36,7 @@ button {
 .logo {
   cursor: pointer;
 }
+/*----------head________*/
 .header__menu {
   list-style: none;
   display: inline-block;
@@ -55,7 +56,13 @@ button {
   z-index: 3;
   padding-right: 100px;
 }
-
+@media (max-width: 500px) {
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*-----------bodu------------*/
 body {
   padding: 0%;
   margin: 0%;
@@ -132,6 +139,24 @@ body {
 
   padding-bottom: 20px;
 }
+@media (max-width: 500px) {
+  .section__block-text {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+  }
+  .section {
+    background-size: 400px 400px;
+  }
+  .section__block-titel {
+    padding-right: 0px;
+    margin-left: 200px;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+/*------------trener------------*/
 
 .section-trener {
   display: flex;
@@ -172,6 +197,27 @@ body {
 .spanT {
   margin-right: 20px;
 }
+@media (max-width: 500px) {
+  .section-trener {
+    margin-top: 100px;
+    background-size: 300px 400px;
+  }
+  .section__block-titel-trener {
+    padding: 0;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 350px;
+    padding-bottom: 50px;
+  }
+  .section__block-text-trener {
+    font-size: 13px;
+    text-align: center;
+    padding-right: 0;
+    width: 400px;
+    margin-left: 90px;
+  }
+}
+/*---------------tabel-------------*/
 
 .tabel {
   background-image: url(img/fon3.JPG);
@@ -254,7 +300,15 @@ body {
 h3 {
   font-size: 18px;
 }
-
+@media (max-width: 500px) {
+  .tabel__titel {
+    font-size: 30px;
+  }
+  .tabel__box {
+    display: none;
+  }
+}
+/*-------karusel------*/
 .wrapper {
   background-image: url(/img/depositphotos_36720683-stock-photo-woman-kickboxer.jpg);
   box-sizing: 1200px 700px;
@@ -345,7 +399,13 @@ h1 {
   height: 100%;
   background-position: center;
 }
-
+@media (max-width: 500px) {
+  .hi-slide {
+    position: absolute;
+    width: 530px;
+  }
+}
+/*-------------paralax---------------*/
 ._content {
   max-width: 1000px;
   margin: 0 auto;
@@ -516,6 +576,24 @@ footer p {
     margin-top: 30px;
   }
 }
+@media (max-width: 500px) {
+  footer {
+    padding: 10px 10px;
+    height: auto;
+    width: 100%;
+  }
+  footer .footer {
+    flex-direction: column;
+  }
+  .sec {
+    margin-top: 30px;
+  }
+  footer p {
+    color: rgb(255, 98, 7);
+    font-size: 15px;
+    width: 300px;
+  }
+}
 /*  news page */
 
 .navi {
@@ -617,6 +695,7 @@ footer p {
 }
 .competitions__p ul li {
   padding-left: 10px;
+  background-color: rgba(0, 0, 0, 0.486);
   border: 3px solid rgb(71, 71, 71);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   margin-left: 40px;
@@ -644,6 +723,17 @@ footer p {
   margin-top: 200px;
   padding-left: 50px;
   border-top: 5px solid rgb(245, 98, 0);
+}
+.reglament {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border: 3px solid rgb(255, 98, 7);
+}
+.reglament:hover {
+  color: rgb(255, 182, 140);
+  border-color: rgb(255, 182, 140);
+  transition: all 0.3s linear;
 }
 .competitions__h2 {
   padding-top: 10px;
@@ -679,4 +769,153 @@ footer p {
 }
 .competitions__href a :hover {
   color: rgb(255, 182, 140);
+}
+/*--------------gallery-----------*/
+.main {
+  position: relative;
+}
+.gallery {
+  position: relative;
+  padding: 45px 0px;
+}
+.gallery__titel {
+  font-size: 44px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 45px;
+  position: relative;
+  color: rgb(245, 98, 0);
+}
+.gallery__titel::after {
+  content: " ";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: rgb(245, 98, 0);
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gallery__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  font-size: 0;
+  margin-top: 30px;
+}
+.gallery__item {
+  display: block;
+  flex: 25%;
+  overflow: hidden;
+  position: relative;
+  padding: 0px 5px;
+}
+/* .gallery__item:hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgb(245, 98, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  opacity: 0;
+  transition: all 0.5s ease;
+} */
+.gallery__item:hover img {
+  transform: scale(1.3) rotate(5deg);
+
+  transition: all 0.5s ease;
+}
+.gallery__item img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 991px) {
+  .gallery__item {
+    flex: 33.3%;
+  }
+}
+@media (max-width: 760px) {
+  .gallery__item {
+    flex: 50%;
+  }
+}
+@media (max-width: 530px) {
+  .gallery__item {
+    flex: 100%;
+  }
+}
+/*------------------popup------------------*/
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.719);
+  background-color: rgba(0, 0, 0, 0.815);
+}
+.close {
+  color: rgb(255, 98, 7);
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: auto;
+}
+.close:hover,
+.close:focus {
+  color: rgb(255, 182, 140);
+  text-decoration: none;
+  cursor: pointer;
+}
+.popup-header {
+  background-color: rgba(0, 0, 0, 0.363);
+  color: rgb(255, 98, 7);
+  display: flex;
+  padding: 2px 16px;
+}
+.popup-body {
+  display: flex;
+  flex-direction: column;
+  line-height: 50px;
+  padding: 2px 16px;
+}
+.popup-footer {
+  padding: 2px 16px;
+  background-color: rgba(0, 0, 0, 0.363);
+  color: rgb(255, 98, 7);
+}
+.popup-content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 0;
+  border: 1px solid rgb(255, 98, 7);
+  width: 88%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animated;
+  animation-duration: 0.4s;
+}
+@keyframes animated {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+body {
+  color: rgb(0, 0, 0);
 }
