@@ -61,6 +61,12 @@ button {
     display: flex;
     flex-direction: column;
   }
+  .header__menu li {
+    padding: 0px;
+  }
+  .main-menu ul li {
+    padding-right: 0px;
+  }
 }
 /*-----------bodu------------*/
 body {
@@ -621,6 +627,7 @@ footer p {
   width: 400px;
   height: 300px;
 }
+
 .main__news-h2 {
   margin-left: 35px;
   margin-top: 30px;
@@ -633,6 +640,7 @@ footer p {
 .main__news-p {
   margin: 30px 40px;
 }
+
 .main__news-block {
   display: flex;
   flex-direction: column;
@@ -651,6 +659,18 @@ footer p {
     transition: all 0.6s;
   }
 }
+@media (max-width: 550px) {
+  .main__news-img {
+    margin-top: 40px;
+    border: 2px solid rgb(71, 71, 71);
+    width: 150px;
+    height: 75px;
+  }
+  .main__news-p {
+    margin: 0;
+    font-size: 13px;
+  }
+}
 /*--------------page------------*/
 .main-page {
   display: block;
@@ -665,7 +685,6 @@ footer p {
 .competitions {
   display: flex;
   text-align: center;
-
   margin-left: 425px;
 }
 .competitions__h1 {
@@ -769,6 +788,38 @@ footer p {
 }
 .competitions__href a :hover {
   color: rgb(255, 182, 140);
+}
+@media (max-width: 500px) {
+  .competitions__h1 {
+    font-size: 38px;
+    transform: translate(0%, -200%);
+  }
+  .competitions {
+    margin: 0;
+  }
+  .competitions__p {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    max-width: 500px;
+  }
+  .competitions__p ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0 auto;
+  }
+  .competitions__p ul li {
+    padding: 5px 10px;
+    margin: 5px auto;
+  }
+  .competitions__block {
+    max-width: 350px;
+  }
+  .competitions__section {
+    margin-top: 50px;
+    padding-left: 0px;
+  }
 }
 /*--------------gallery-----------*/
 .main {
